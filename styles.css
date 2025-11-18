@@ -1,0 +1,62 @@
+body {
+  background: linear-gradient(135deg, #c7d2fe, #e0e7ff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding-top: 40px;
+  color: #333;
+}
+
+.tool-btn {
+  width: 60%;
+  margin: 15px auto;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fbb1b1, #f472b6);
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.tool-btn:hover {
+  background: linear-gradient(135deg, #f472b6, #ec4899);
+  transform: translateY(-2px);
+}
+
+.box {
+  background: linear-gradient(145deg, #ffffff, #f0f4ff);
+  padding: 30px;
+  margin: auto;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.box:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+input.w3-input {
+  border-radius: 8px;
+  padding: 10px;
+}
+
+button.w3-button {
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+button.w3-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+footer {
+  margin-top: 40px;
+  color: gray;
+}
+
