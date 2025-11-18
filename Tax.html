@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tax Calculator</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+
+  <div class="box">
+    <h2>Tax Calculator</h2>
+    <input class="w3-input w3-border" id="income" type="number" placeholder="Enter income">
+    <button class="w3-button w3-blue w3-margin-top" onclick="calcTax()">Compute</button>
+    <p id="result" class="w3-large"></p>
+
+    <a href="index.html" class="w3-button w3-gray w3-margin-top">Back</a>
+  </div>
+
+  <script>
+    function calcTax() {
+      let income = document.getElementById('income').value;
+      if (!income) return document.getElementById('result').innerText = "Enter income.";
+      let tax = income * 0.1;
+      document.getElementById('result').innerText = `Tax: ₱${tax.toFixed(2)}`;
+    }
+  </script>
+
+</body>
+</html>
