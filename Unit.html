@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unit Conversion</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+
+  <div class="box">
+    <h2>Unit Conversion</h2>
+    <input class="w3-input w3-border" id="meters" type="number" placeholder="Enter meters">
+    <button class="w3-button w3-blue w3-margin-top" onclick="convert()">Convert</button>
+    <p id="result" class="w3-large"></p>
+
+    <a href="index.html" class="w3-button w3-gray w3-margin-top">Back</a>
+  </div>
+
+  <script>
+    function convert() {
+      let m = document.getElementById('meters').value;
+      if (!m) return document.getElementById('result').innerText = "Enter meters.";
+      let km = (m / 1000).toFixed(3);
+      document.getElementById('result').innerText = `${m} meters = ${km} kilometers`;
+    }
+  </script>
+
+</body>
+</html>
