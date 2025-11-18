@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payroll</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+
+  <div class="box">
+    <h2>Payroll System</h2>
+    <input class="w3-input w3-border" id="name" type="text" placeholder="Employee Name">
+    <input class="w3-input w3-border w3-margin-top" id="hours" type="number" placeholder="Hours Worked">
+    <input class="w3-input w3-border w3-margin-top" id="rate" type="number" placeholder="Rate per Hour">
+
+    <button class="w3-button w3-blue w3-margin-top" onclick="computePay()">Compute Pay</button>
+    <p id="result" class="w3-large"></p>
+
+    <a href="index.html" class="w3-button w3-gray w3-margin-top">Back</a>
+  </div>
+
+  <script>
+    function computePay() {
+      let name = document.getElementById('name').value;
+      let hours = parseFloat(document.getElementById('hours').value);
+      let rate = parseFloat(document.getElementById('rate').value);
+
+      if (!name || isNaN(hours) || isNaN(rate)) {
+        return document.getElementById('result').innerText = "Please fill all fields.";
+      }
+
+      let pay = hours * rate;
+      document.getElementById('result').innerText = `${name}'s Total Pay: ₱${pay.toFixed(2)}`;
+    }
+  </script>
+
+</body>
+</html>
